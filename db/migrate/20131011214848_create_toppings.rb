@@ -1,9 +1,9 @@
 class CreateToppings < ActiveRecord::Migration
   def change
-    create_table :toppings do |t|
+    create_table :ingredients do |t|
       t.string :name
     end
 
-    add_index :toppings, :name
+    add_index :ingredients, :name
   end
 end

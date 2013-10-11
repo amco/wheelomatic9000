@@ -13,23 +13,23 @@
 
 ActiveRecord::Schema.define(version: 20131011215036) do
 
-  create_table "pizza_toppings", force: true do |t|
-    t.integer "pizza_id"
-    t.integer "topping_id"
+  create_table "dish_ingredients", force: true do |t|
+    t.integer "dish_id"
+    t.integer "ingredient_id"
   end
 
-  create_table "pizzas", force: true do |t|
+  create_table "dishes", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pizzas", ["name"], name: "index_pizzas_on_name", unique: true
+  add_index "dishes", ["name"], name: "index_dishes_on_name", unique: true
 
-  create_table "toppings", force: true do |t|
+  create_table "ingredients", force: true do |t|
     t.string "name"
   end
 
-  add_index "toppings", ["name"], name: "index_toppings_on_name"
+  add_index "ingredients", ["name"], name: "index_ingredients_on_name"
 
 end

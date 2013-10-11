@@ -1,8 +1,8 @@
 class CreatePizzaToppings < ActiveRecord::Migration
   def change
-    create_table :pizza_toppings do |t|
-      t.integer :pizza_id
-      t.integer :topping_id
+    create_table :dish_ingredients do |t|
+      t.integer :dish_id
+      t.integer :ingredient_id
     end
   end
 end
