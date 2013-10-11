@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131011214354) do
+ActiveRecord::Schema.define(version: 20131011215036) do
+
+  create_table "pizza_toppings", force: true do |t|
+    t.integer "pizza_id"
+    t.integer "topping_id"
+  end
 
   create_table "pizzas", force: true do |t|
     t.string   "name"
@@ -20,5 +25,11 @@ ActiveRecord::Schema.define(version: 20131011214354) do
   end
 
   add_index "pizzas", ["name"], name: "index_pizzas_on_name", unique: true
+
+  create_table "toppings", force: true do |t|
+    t.string "name"
+  end
+
+  add_index "toppings", ["name"], name: "index_toppings_on_name"
 
 end
