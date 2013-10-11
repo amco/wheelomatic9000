@@ -1,0 +1,1 @@
+Wheelomatic9000::Application.config.secret_token = ENV['SECRET_TOKEN'] || bde8eee598129768ea1d58f28d614ae4db919496f0170dd68b3ee6f2bbb2c6406faf87919a2b22d3e56b41059df5f4227afd7a476231f2e58e599431f00020d9
