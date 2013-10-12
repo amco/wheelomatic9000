@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+
+  wheel:
+    spin:
+      title: Wheel Spinners Unite!
