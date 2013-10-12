@@ -7,4 +7,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'slim-rails'
+gem 'slim-rails', '~> 2.0.0'
+gem 'factory_girl_rails', '~> 4.2.0'
+
+group :doc do
+  gem 'sdoc', require: false
+end
+
+
