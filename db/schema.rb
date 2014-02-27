@@ -11,6 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20131011215036) do
+
+  create_table "dish_ingredients", force: true do |t|
+    t.integer "dish_id"
+    t.integer "ingredient_id"
+  end
+
+  create_table "dishes", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "dishes", ["name"], name: "index_dishes_on_name", unique: true
+
+  create_table "ingredients", force: true do |t|
+    t.string "name"
+  end
+
+  add_index "ingredients", ["name"], name: "index_ingredients_on_name"
 
 end
